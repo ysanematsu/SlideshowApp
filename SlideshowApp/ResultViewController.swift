@@ -29,7 +29,10 @@ class ResultViewController: UIViewController {
        imageview2.image = UIImage(named: result)
     }
     
-
+    @IBAction func modoru2Tap(_ sender: Any) {
+        //ViewController.timer = nil
+    }
+    
     /*
     // MARK: - Navigation
 
