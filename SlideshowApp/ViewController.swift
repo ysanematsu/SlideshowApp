@@ -115,7 +115,15 @@ class ViewController: UIViewController {
                resultViewController.imageNameArray2 = imageNameArray
                 //2画面目のselectedImageに配列のインデックス番号を渡す
                resultViewController.selectedImage = disprayImageNo
-               
+               // タイマーを停止
+               self.timer.invalidate()
+                //停止時にボタン表示を再生にする
+                saiseitoteishi.setTitle("再生", for: .normal)
+                //タイマーをnilに戻す（タイマーを停止しただけではnilに戻らない。再度、再生したい時にnilである条件にするため、ここでnilに戻しておく）
+                self.timer = nil
+                //進むと戻るボタンを再表示
+                susumu.isEnabled = true
+                modoru.isEnabled = true
            }
 }
 
